@@ -17,10 +17,24 @@
 # You must specify all four of these settings.  Consult with your
 # enterprise directory administrators to get suitable values.
 # These access credentials are sensitive and must be protected.
+
+
+
 username: "adservice@seaofcarag.com"
 password: "P3rficient"
-host: "ldap://seaofcarag.com:389"
+
+# Single DC Only (seaofcarag.com)
 base_dn: "DC=seaofcarag,DC=com"
+host: "ldap://seaofcarag.com:389"        # Standard LDAP
+# host: "ldaps://seaofcarag.com:636"      # Secure LDPAP (ldaps)
+
+
+# Global Catalog settings - seaofcarag.com + newcarag.com
+# base_dn: "DC=com"
+# host: "ldap://seaofcarag.com:3268"      # Global Catalog
+# host: "ldaps://seaofcarag.com:3269"     # Secure Global Catalog
+
+
 
 # (optional) You can store credentials in the operating system credential store
 # (Windows Credential Manager, Mac Keychain, Linux Freedesktop Secret Service
